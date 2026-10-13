@@ -11,12 +11,10 @@
 
 ## 📞 Información de contacto
 
-- **Correo electrónico:** [Tu correo electrónico]
-- **Teléfono:** [Tu número de contacto]
+- **Correo electrónico:** [gonzalezmayerlli17@gmail.com]
+- **Teléfono:** [3502565483]
 - **Ubicación:** Colombia
-- **LinkedIn:** [Enlace a tu perfil de LinkedIn]
-- **Portafolio:** [Enlace a tu portafolio]
-- **GitHub:** [Enlace a tu perfil de GitHub]
+- **GitHub:** [https://github.com/gonzalezmayerlli17-ctrl]
 
 ---
 
@@ -71,7 +69,6 @@ Conocimientos relacionados con:
 
 **Educación media culminada.**
 
-*Los nombres oficiales de las instituciones y los años de finalización pueden añadirse cuando se completen los datos.*
 
 ---
 
@@ -290,7 +287,6 @@ Mis prioridades de aprendizaje son:
 - Mejorar la documentación y presentación de proyectos.
 - Explorar herramientas para crear contenidos educativos tecnológicos.
 
-*En esta sección se añadirán cursos y certificaciones verificables a medida que se completen.*
 
 ---
 
