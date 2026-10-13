@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoja de vida — Mayerlli González Zapata</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#232a3b; --muted:#5f6878; --navy:#1e2746; --indigo:#7c83fd; --violet:#9b8afb; --lilac:#c3b1e1;
+    --soft:#f3f2fd; --line:#e2e0f4; --bg:#e8e9f1;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:var(--bg);color:var(--ink);font-family:Inter,"Segoe UI",Calibri,Arial,sans-serif;font-size:9.6pt;line-height:1.45}
+  .page{width:210mm;height:297mm;margin:10mm auto;background:#fff;display:flex;flex-direction:column;overflow:hidden;box-shadow:0 4px 18px rgba(30,39,70,.2);position:relative}
+
+  /* Banner */
+  .banner{position:relative;overflow:hidden;color:#fff;background:linear-gradient(120deg,var(--navy) 0%,#3a3f8f 55%,var(--indigo) 100%);padding:9mm 12mm 7mm;display:flex;align-items:center;gap:7mm}
+  .banner::before,.banner::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.08)}
+  .banner::before{width:60mm;height:60mm;right:-14mm;top:-26mm}
+  .banner::after{width:34mm;height:34mm;right:34mm;bottom:-22mm;background:rgba(195,177,225,.2)}
+  .avatar{flex:none;width:25mm;height:25mm;border-radius:50%;background:linear-gradient(135deg,var(--lilac),var(--indigo));border:1.2mm solid rgba(255,255,255,.85);display:grid;place-items:center;font:700 19pt Poppins,sans-serif;color:#fff;position:relative;z-index:1}
+  .who{position:relative;z-index:1}
+  h1{font:700 22pt/1.1 Poppins,"Segoe UI",sans-serif;letter-spacing:.2px}
+  .role{margin-top:1.5mm;font-size:10pt;color:#dfe1ff}
+  .chips{display:flex;flex-wrap:wrap;gap:1.6mm;margin-top:3.5mm}
+  .chips span{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);border-radius:5mm;padding:.8mm 2.8mm;font-size:8.3pt}
+  .banner.slim{padding:6mm 12mm}
+  .banner.slim h1{font-size:15pt}
+  .banner.slim .role{margin-top:.5mm;font-size:9pt}
+
+  .body{flex:1;display:grid;grid-template-columns:66mm 1fr;min-height:0}
+  aside{background:linear-gradient(180deg,var(--soft),#eceafb);padding:7mm 7mm 8mm;border-right:1px solid var(--line);position:relative;overflow:hidden}
+  aside::after{content:"";position:absolute;width:50mm;height:50mm;border-radius:50%;background:rgba(155,138,251,.13);left:-20mm;bottom:-20mm}
+  aside>*{position:relative;z-index:1}
+  main{padding:7mm 11mm 8mm 9mm;position:relative}
+
+  .h{display:flex;align-items:center;gap:2.2mm;font:600 10.5pt Poppins,sans-serif;color:var(--navy);margin:0 0 2.6mm}
+  aside .h{margin-top:5.5mm}
+  aside .h:first-child{margin-top:0}
+  .ic{flex:none;width:6.4mm;height:6.4mm;border-radius:50%;display:grid;place-items:center;font-size:8pt;background:linear-gradient(135deg,var(--violet),var(--indigo));color:#fff;box-shadow:0 1px 3px rgba(124,131,253,.5)}
+  main .h{font-size:12pt;padding-bottom:1.6mm;border-bottom:1.5px solid var(--line);position:relative}
+  main .h::after{content:"";position:absolute;left:0;bottom:-1.5px;width:22mm;height:2.5px;border-radius:2px;background:linear-gradient(90deg,var(--indigo),var(--lilac))}
+  section{margin-bottom:5.5mm}
+
+  .badges{display:flex;flex-wrap:wrap;gap:1.6mm}
+  .badges img{height:6.2mm;border-radius:1.2mm;display:block;box-shadow:0 1px 2px rgba(30,39,70,.18)}
+  .social{display:flex;flex-direction:column;gap:2mm}
+  .social a{display:flex;align-items:center;gap:2mm;color:var(--ink);text-decoration:none;font-size:8.5pt}
+  .social img{height:6.2mm;border-radius:1.2mm;flex:none;box-shadow:0 1px 2px rgba(30,39,70,.18)}
+  .slot{border:1.4px dashed var(--violet);background:#fff;border-radius:2mm;padding:2.5mm 3mm;font-size:8.5pt;color:var(--muted)}
+  .slot a{color:var(--navy);font-weight:600;word-break:break-all}
+  aside ul{list-style:none}
+  aside li{margin-bottom:1.5mm;font-size:8.8pt;padding-left:4mm;position:relative}
+  aside li::before{content:"";position:absolute;left:0;top:1.9mm;width:1.8mm;height:1.8mm;border-radius:50%;background:var(--violet)}
+
+  p{margin-bottom:2mm}
+  .tl{position:relative;padding-left:6mm;border-left:2px solid var(--line);margin-left:1.5mm}
+  .tl .item{position:relative;margin-bottom:3.6mm}
+  .tl .item::before{content:"";position:absolute;left:-7.6mm;top:1.1mm;width:3mm;height:3mm;border-radius:50%;background:#fff;border:2px solid var(--indigo)}
+  .item h3{font:600 10pt Poppins,sans-serif;color:var(--navy)}
+  .meta{color:var(--muted);font-size:8.8pt;margin-bottom:1mm}
+  main ul{padding-left:4.5mm}
+  main li{margin-bottom:.7mm}
+  main li::marker{color:var(--violet)}
+  .card{background:linear-gradient(180deg,#fff,var(--soft));border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:2mm;padding:3mm 4mm;margin-bottom:3.2mm}
+  .pills{display:flex;flex-wrap:wrap;gap:1.2mm;margin:1mm 0 1.6mm}
+  .pills span{background:#fff;border:1px solid var(--lilac);color:#4a4f9c;border-radius:4mm;padding:.2mm 2.2mm;font-size:8pt;font-weight:500}
+  code{font-family:Consolas,monospace;font-size:8.6pt;background:#eceafb;padding:0 1mm;border-radius:.8mm}
+  .note{color:var(--muted);font-style:italic;font-size:9pt;background:var(--soft);border:1px dashed var(--lilac);border-radius:2mm;padding:2.5mm 3.5mm}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+  .two h4{font:600 9pt Poppins,sans-serif;color:var(--indigo);margin-bottom:1mm}
+  table{width:100%;border-collapse:separate;border-spacing:0 1.2mm;font-size:9pt}
+  td{padding:1.6mm 2.6mm;background:var(--soft);vertical-align:top}
+  td:first-child{font:600 8.8pt Poppins,sans-serif;color:var(--navy);width:31%;border-radius:1.6mm 0 0 1.6mm;border-left:3px solid var(--indigo)}
+  td:last-child{border-radius:0 1.6mm 1.6mm 0}
+  .quote{margin-top:3mm;text-align:center;color:#4a4f9c;font-style:italic;font-size:9pt;padding:3mm;border-radius:2mm;background:linear-gradient(90deg,#eceafb,#f6f1fb,#eceafb)}
+  .foot{height:3mm;background:linear-gradient(90deg,var(--indigo),var(--violet),var(--lilac))}
+
+  @page{size:A4;margin:0}
+  @media print{
+    body{background:none}
+    .page{margin:0;box-shadow:none;break-after:page}
+    .page:last-child{break-after:auto}
+  }
+  @media (max-width:800px){
+    .page{width:100%;height:auto;margin:0 0 6mm}
+    .body{grid-template-columns:1fr}
+    .banner{flex-direction:column;text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== PÁGINA 1 ===================== -->
+<div class="page">
+  <header class="banner">
+    <div class="avatar">MG</div>
+    <div class="who">
+      <h1>Mayerlli González Zapata</h1>
+      <div class="role">Desarrolladora de Software en formación · ADSO — SENA</div>
+      <div class="chips">
+        <span>✉ gonzalezmayerlli17@gmail.com</span>
+        <span>☎ 3502565483</span>
+        <span>📍 Colombia</span>
+        <span>GitHub: gonzalezmayerlli17-ctrl</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="body">
+    <aside>
+      <div class="h"><span class="ic">🔗</span>Perfiles en línea</div>
+      <div class="social">
+        <a href="#" title="Agrega aquí tu enlace de LinkedIn"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"><span>tu-usuario</span></a>
+        <a href="#" title="Agrega aquí tu enlace de YouTube"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube"><span>tu-canal</span></a>
+        <a href="#" title="Agrega aquí tu enlace de GitLab"><img src="https://img.shields.io/badge/GitLab-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white" alt="GitLab"><span>tu-usuario</span></a>
+        <a href="https://github.com/gonzalezmayerlli17-ctrl"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"><span>mi-perfil</span></a>
+      </div>
+
+      <div class="h"><span class="ic">📄</span>Mi currículum</div>
+      <div class="slot">Pega aquí tu enlace:<br><a href="#">https://tu-enlace-al-curriculum</a></div>
+
+      <div class="h"><span class="ic">💻</span>Lenguajes</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+        <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java">
+        <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP">
+      </div>
+
+      <div class="h"><span class="ic">🌐</span>Desarrollo web</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
+        <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3">
+      </div>
+
+      <div class="h"><span class="ic">🗄</span>Bases de datos</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+        <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+        <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB">
+      </div>
+
+      <div class="h"><span class="ic">🛠</span>Herramientas</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Visual_Studio_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code">
+        <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellijidea&logoColor=white" alt="IntelliJ IDEA">
+        <img src="https://img.shields.io/badge/pgAdmin-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="pgAdmin">
+        <img src="https://img.shields.io/badge/XAMPP-FB7A24?style=for-the-badge&logo=xampp&logoColor=white" alt="XAMPP">
+      </div>
+    </aside>
+
+    <main>
+      <section>
+        <div class="h"><span class="ic">👤</span>Perfil profesional</div>
+        <p>Estudiante de <strong>Análisis y Desarrollo de Software (ADSO) en el SENA</strong>, con técnica previa en Programación de Software. Me enfoco en el desarrollo web, la programación y el diseño de bases de datos, con el objetivo de construir soluciones que respondan a necesidades reales.</p>
+        <p>He trabajado con varios lenguajes, bases de datos relacionales y no relacionales, y modelado de información. Me caracterizan el pensamiento lógico, la organización, la paciencia y la capacidad de resolver problemas. Proyecto mi carrera hacia el desarrollo de software, la arquitectura de aplicaciones y la <strong>formación de talento en tecnología</strong>.</p>
+      </section>
+
+      <section>
+        <div class="h"><span class="ic">🎓</span>Educación</div>
+        <div class="tl">
+          <div class="item">
+            <h3>Análisis y Desarrollo de Software (ADSO)</h3>
+            <div class="meta">Servicio Nacional de Aprendizaje — SENA · En curso</div>
+            <ul>
+              <li>Levantamiento de requisitos y lógica de programación.</li>
+              <li>Diseño y administración de bases de datos; modelado entidad-relación.</li>
+              <li>Metodologías de desarrollo y gestión de proyectos.</li>
+            </ul>
+          </div>
+          <div class="item">
+            <h3>Técnica en Programación de Software</h3>
+            <div class="meta">Grados 10.º y 11.º de bachillerato</div>
+            <ul><li>Fundamentos de programación, lógica computacional e introducción al desarrollo.</li></ul>
+          </div>
+          <div class="item">
+            <h3>Bachillerato</h3>
+            <div class="meta">Educación media culminada</div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="h"><span class="ic">💼</span>Experiencia laboral</div>
+        <p class="note">Espacio reservado para tus trabajos anteriores: cargo, empresa, fechas y responsabilidades. Reemplaza esta nota con tu experiencia.</p>
+      </section>
+
+      <section>
+        <div class="h"><span class="ic">🚀</span>Proyectos académicos</div>
+        <div class="card">
+          <h3 style="font:600 10pt Poppins,sans-serif;color:var(--navy)">Sistema de Control de Acceso RFID</h3>
+          <div class="pills"><span>Arduino Uno</span><span>RFID RC522</span><span>PHP</span><span>MySQL</span><span>XAMPP</span><span>HTML y CSS</span></div>
+          <ul>
+            <li>Control de acceso con tarjetas RFID y aplicación web para gestionar la información.</li>
+            <li>Diseño de la base de datos, formularios de registro e inicio de sesión, y corrección de errores.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="foot"></div>
+</div>
+
+<!-- ===================== PÁGINA 2 ===================== -->
+<div class="page">
+  <header class="banner slim">
+    <div class="who">
+      <h1>Mayerlli González Zapata</h1>
+      <div class="role">Desarrolladora de Software en formación · ADSO — SENA</div>
+    </div>
+  </header>
+
+  <div class="body">
+    <aside>
+      <div class="h"><span class="ic">🔌</span>Hardware</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
+      </div>
+
+      <div class="h"><span class="ic">📝</span>Control de versiones</div>
+      <div class="badges">
+        <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git">
+        <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
+        <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="Markdown">
+      </div>
+
+      <div class="h"><span class="ic">🔄</span>Metodologías</div>
+      <ul>
+        <li><strong>Scrum:</strong> roles, eventos y entregas incrementales.</li>
+        <li><strong>Kanban:</strong> seguimiento visual de tareas.</li>
+        <li><strong>XP:</strong> calidad de código y desarrollo iterativo.</li>
+      </ul>
+
+      <div class="h"><span class="ic">🌟</span>Habilidades blandas</div>
+      <ul>
+        <li>Trabajo en equipo</li>
+        <li>Pensamiento lógico y analítico</li>
+        <li>Organización y responsabilidad</li>
+        <li>Atención al detalle</li>
+        <li>Adaptabilidad</li>
+        <li>Paciencia y disposición para aprender</li>
+        <li>Capacidad para buscar soluciones</li>
+      </ul>
+    </aside>
+
+    <main>
+      <section>
+        <div class="h"><span class="ic">🚀</span>Proyectos académicos</div>
+        <div class="card">
+          <h3 style="font:600 10pt Poppins,sans-serif;color:var(--navy)">Sistema de gestión de cine</h3>
+          <div class="pills"><span>PostgreSQL</span><span>SQL</span><span>pgAdmin</span></div>
+          <ul>
+            <li>Base de datos para películas, salas, funciones, espectadores y boletos.</li>
+            <li>Consultas con <code>JOIN</code>, subconsultas, filtros, agrupaciones y funciones de agregación.</li>
+            <li>Funciones y procedimientos para la venta de boletos y la validación de asientos disponibles.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font:600 10pt Poppins,sans-serif;color:var(--navy)">Sistema de alquiler de vehículos</h3>
+          <div class="pills"><span>MySQL</span><span>MongoDB</span></div>
+          <ul>
+            <li>Modelo relacional y colecciones para clientes, vehículos, contratos, pagos y multas.</li>
+            <li>Registro de contratos, pagos y devoluciones.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 style="font:600 10pt Poppins,sans-serif;color:var(--navy)">Ejercicios de programación orientada a objetos</h3>
+          <div class="pills"><span>Python</span><span>Java</span></div>
+          <ul>
+            <li>Clases, objetos, atributos y métodos; condicionales y validación de datos.</li>
+            <li>Manejo de productos e inventarios y estados de préstamos de libros.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="h"><span class="ic">⚙</span>Habilidades técnicas</div>
+        <table>
+          <tr><td>Programación</td><td>Lógica de programación, orientación a objetos, validación de datos.</td></tr>
+          <tr><td>Desarrollo web</td><td>HTML5, CSS3, PHP, formularios y conexión con bases de datos.</td></tr>
+          <tr><td>Bases de datos</td><td>SQL, claves primarias y foráneas, normalización, <code>GROUP BY</code>/<code>HAVING</code>, procedimientos almacenados, CRUD en MongoDB.</td></tr>
+          <tr><td>Análisis y diseño</td><td>Requisitos, diagramas E-R, modelo relacional, diccionario de datos.</td></tr>
+          <tr><td>Documentación</td><td>Documentación técnica, README y organización de repositorios.</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <div class="h"><span class="ic">📚</span>Educación tecnológica y formación continua</div>
+        <div class="two">
+          <div>
+            <h4>Intereses de enseñanza</h4>
+            <ul>
+              <li>Fundamentos de programación.</li>
+              <li>Guías y ejercicios prácticos.</li>
+              <li>Contenidos sobre bases de datos.</li>
+              <li>Aprendizaje basado en proyectos.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Próximos objetivos</h4>
+            <ul>
+              <li>Mejorar en desarrollo web.</li>
+              <li>Profundizar en SQL y diseño de datos.</li>
+              <li>Fortalecer la arquitectura de aplicaciones.</li>
+              <li>Aplicar buenas prácticas de Git.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="quote">“Cada línea de código es una oportunidad para aprender, crear y transformar ideas en soluciones.”</div>
+    </main>
+  </div>
+  <div class="foot"></div>
+</div>
+
+</body>
+</html>
