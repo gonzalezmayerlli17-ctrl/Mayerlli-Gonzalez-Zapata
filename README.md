@@ -313,6 +313,18 @@ Creo que la tecnología no consiste solamente en escribir código: también impl
 
 ---
 
+📊 Estadísticas de GitHub
+<p align="center"> <img src="https://github-readme-stats.vercel.app/api?username=gonzalezmayerlli17-ctrl
+&show_icons=true&include_all_commits=true&theme=tokyonight&hide_border=true&locale=es" alt="Estadísticas de GitHub" height="180"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=gonzalezmayerlli17-ctrl
+&layout=compact&theme=tokyonight&hide_border=true&locale=es" alt="Lenguajes más utilizados" height="180"/>
+</p>
+<p align="center"> <img src="https://github-readme-streak-stats.herokuapp.com/?user=gonzalezmayerlli17-ctrl
+&theme=tokyonight&hide_border=true&locale=es" alt="Racha de contribuciones de GitHub"/> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=gonzalezmayerlli17-ctrl
+&style=for-the-badge&color=blueviolet" alt="Visitas al perfil"/> </p>
+
+
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=7C83FD,9B8AFB,C3B1E1&height=120&section=footer" alt="Banner decorativo de cierre" />
 </p>
